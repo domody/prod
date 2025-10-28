@@ -1,0 +1,34 @@
+[
+  {
+    "ownerId": "user_123",
+    "title": "Project Plan",
+    "content": "Outline the roadmap and key deliverables for Q4.",
+    "type": "doc",
+    "sharedWith": [],
+    "updatedTime": 1730131200000
+  },
+  {
+    "ownerId": "user_123",
+    "title": "Meeting Notes",
+    "content": "Discussion summary and next steps from the last sync.",
+    "type": "doc",
+    "sharedWith": [],
+    "updatedTime": 1730134800000
+  },
+  {
+    "ownerId": "user_123",
+    "title": "Ideas",
+    "content": "List of random ideas and concepts worth exploring.",
+    "type": "doc",
+    "sharedWith": [],
+    "updatedTime": 1730138400000
+  },
+  {
+    "ownerId": "user_123",
+    "title": "Marketing Strategy",
+    "content": "Initial thoughts on outreach, content, and branding.",
+    "type": "doc",
+    "sharedWith": [],
+    "updatedTime": 1730142000000
+  }
+]
