@@ -1,16 +1,12 @@
-"use client";
-
-import { Button } from "@workspace/ui/components/button"
-import { useQuery } from "convex/react";
-import { api } from "@convex/_generated/api"
+import { DocumentCards } from "@/components/information/DocumentCards";
 
 export default function Page() {
-  const documents = useQuery(api.documents.getUserDocuments, {ownerId: "user_123"})
   return (
-    <div className="flex items-center justify-center min-h-svh">
-      <div className="flex flex-col items-center justify-center gap-4">
-        {documents?.map(({ _id, title }) => <div key={_id}>{title}</div>)}
+    <div className="flex flex-col items-start justify-start min-h-svh max-w-5xl mx-auto px-4 @5xl/main:px-0">
+      <div className="w-full flex items-center justify-center py-16">
+        <p className="text-2xl font-semibold">Good Afternoon</p>
       </div>
+      <DocumentCards />
     </div>
-  )
+  );
 }

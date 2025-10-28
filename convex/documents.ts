@@ -8,7 +8,7 @@ export const createNewDocument = mutation({
     content: v.optional(v.string()),
     type: v.optional(v.string()),
     parentId: v.optional(v.id("documents")),
-    // spaceId: v.optional(v.id("spaces")),
+    spaceId: v.optional(v.id("spaces")),
   },
   handler: async (ctx, args) => {
     const now = Date.now();
@@ -19,7 +19,7 @@ export const createNewDocument = mutation({
       content: args.content ?? "",
       type: args.type ?? "doc",
       parentId: args.parentId,
-      // spaceId: args.spaceId,
+      spaceId: args.spaceId,
       sharedWith: [],
       updatedTime: now,
     });

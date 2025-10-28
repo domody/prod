@@ -9,21 +9,15 @@ import {
   SidebarMenuItem,
 } from "@workspace/ui/components/sidebar";
 
+import { SidebarSpaces } from "./SidebarSpaces";
 export function AppSidebar() {
   return (
     <Sidebar>
       <SidebarHeader>
-        <p>Username</p>
+        {/* <p>Username</p> */}
       </SidebarHeader>
       <SidebarContent>
-        <SidebarGroup>
-          <SidebarGroupLabel>Spaces</SidebarGroupLabel>
-          <SidebarMenu>
-            <SidebarMenuItem>
-              <SidebarMenuButton></SidebarMenuButton>
-            </SidebarMenuItem>
-          </SidebarMenu>
-        </SidebarGroup>
+        <SidebarSpaces />
       </SidebarContent>
     </Sidebar>
   );

@@ -9,6 +9,7 @@
  */
 
 import type * as documents from "../documents.js";
+import type * as spaces from "../spaces.js";
 
 import type {
   ApiFromModules,
@@ -26,6 +27,7 @@ import type {
  */
 declare const fullApi: ApiFromModules<{
   documents: typeof documents;
+  spaces: typeof spaces;
 }>;
 declare const fullApiWithMounts: typeof fullApi;
 
