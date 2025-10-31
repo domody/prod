@@ -9,7 +9,9 @@ import {
   SidebarMenuItem,
 } from "@workspace/ui/components/sidebar";
 
+import { SidebarMain } from "./SidebarMain";
 import { SidebarSpaces } from "./SidebarSpaces";
+
 export function AppSidebar() {
   return (
     <Sidebar>
@@ -17,6 +19,7 @@ export function AppSidebar() {
         {/* <p>Username</p> */}
       </SidebarHeader>
       <SidebarContent>
+        <SidebarMain />
         <SidebarSpaces />
       </SidebarContent>
     </Sidebar>

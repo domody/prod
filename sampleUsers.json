@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Alex Johnson",
+    "email": "alex.johnson@example.com",
+    "avatarUrl": "https://api.dicebear.com/9.x/identicon/svg?seed=alex",
+    "lastActiveTime": 1730145600000,
+    "preferences": {
+      "theme": "dark",
+      "language": "en"
+    }
+  },
+  {
+    "name": "Jordan Smith",
+    "email": "jordan.smith@example.com",
+    "avatarUrl": "https://api.dicebear.com/9.x/identicon/svg?seed=jordan",
+    "lastActiveTime": 1730149200000,
+    "preferences": {
+      "theme": "light",
+      "language": "en"
+    }
+  },
+  {
+    "name": "Taylor Kim",
+    "email": "taylor.kim@example.com",
+    "avatarUrl": "https://api.dicebear.com/9.x/identicon/svg?seed=taylor",
+    "lastActiveTime": 1730152800000,
+    "preferences": {
+      "theme": "dark",
+      "language": "ko"
+    }
+  }
+]

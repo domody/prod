@@ -2,6 +2,8 @@
 
 import { useQuery } from "convex/react";
 import { api } from "@convex/_generated/api";
+import { useUserId } from "../providers/UserProvider";
+
 import {
   SidebarGroup,
   SidebarGroupLabel,
@@ -11,7 +13,12 @@ import {
 } from "@workspace/ui/components/sidebar";
 
 export function SidebarSpaces() {
-  const spaces = useQuery(api.spaces.getUserSpaces, { ownerId: "user_123" });
+  const userId = useUserId();
+  if (!userId.userId) {
+    return;
+  }
+
+  const spaces = useQuery(api.spaces.getUserSpaces, { ownerId: userId.userId });
 
   return (
     <SidebarGroup>

@@ -2,6 +2,22 @@ import { defineSchema, defineTable } from "convex/server";
 import { v } from "convex/values";
 
 export default defineSchema({
+  users: defineTable({
+    name: v.string(),
+    email: v.string(),
+
+    avatarUrl: v.optional(v.string()),
+
+    lastActiveTime: v.optional(v.number()),
+
+    preferences: v.optional(
+      v.object({
+        theme: v.optional(v.string()),
+        language: v.optional(v.string()),
+      })
+    ),
+  }),
+
   documents: defineTable({
     ownerId: v.string(),
     title: v.string(),

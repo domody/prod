@@ -1,5 +1,4 @@
 import { DocumentCards } from "@/components/information/DocumentCards";
-
 export default function Page() {
   return (
     <div className="flex flex-col items-start justify-start min-h-svh max-w-5xl mx-auto px-4 @5xl/main:px-0">
