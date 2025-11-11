@@ -71,19 +71,19 @@ export function Dashboard2() {
     <div className="flex flex-col items-start justify-start h-screen max-h-screen w-full">
       <AppTopbar>
         <div className="w-full flex items-center justify-start gap-2">
-          <div className="bg-accent size-6 rounded [&_svg]:size-3.5 flex items-center justify-center">
+          <div className="bg-accent size-6 rounded border [&_svg]:size-3.5 flex items-center justify-center">
             <Code />
           </div>
           <p className="text-sm font-semibold">Development</p>
         </div>
       </AppTopbar>
-      <Topbar className="items-end">
+      <Topbar className="items-center">
         <Tabs className="" value={activeTab} onValueChange={setActiveTab}>
-          <TabsList className="p-0 gap-2 bg-transparent">
+          <TabsList className="gap-2 bg-transparent">
             {tabs.map((tab) => (
-              <DashTabTrigger key={tab.value} value={tab.value}>
+              <TabsTrigger key={tab.value} value={tab.value} className="">
                 <tab.icon /> {tab.label}
-              </DashTabTrigger>
+              </TabsTrigger>
             ))}
           </TabsList>
         </Tabs>
