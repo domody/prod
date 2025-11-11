@@ -121,7 +121,7 @@ export function SummaryContent() {
   );
 }
 
-function DashboardCard({ className, ...props }: React.ComponentProps<"div">) {
+export function DashboardCard({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       className={cn(
@@ -133,14 +133,14 @@ function DashboardCard({ className, ...props }: React.ComponentProps<"div">) {
   );
 }
 
-function DashboardCardLabel({
+export function DashboardCardLabel({
   className,
   ...props
-}: React.ComponentProps<"p">) {
+}: React.ComponentProps<"span">) {
   return (
-    <p
+    <span
       className={cn(
-        "font-medium text-xs text-muted-foreground px-1 pt-1",
+        "font-medium text-xs text-muted-foreground px-1 pt-1 flex items-center gap-1.5 [&_svg:not([class*='size-'])]:size-3.5",
         className
       )}
       {...props}
@@ -148,13 +148,13 @@ function DashboardCardLabel({
   );
 }
 
-function DashboardCardAction({
+export function DashboardCardAction({
   className,
   children,
   ...props
-}: React.ComponentProps<"p">) {
+}: React.ComponentProps<"span">) {
   return (
-    <p
+    <span
       className={cn(
         "absolute top-2 right-1 text-xs text-muted-foreground opacity-0 mt-2 group-hover/card:opacity-100 group-hover/card:mt-0 transition-all flex items-center justify-end gap-1 [&>svg]:size-3.5",
         className
@@ -163,18 +163,18 @@ function DashboardCardAction({
     >
       {children}
       <ChevronRight />
-    </p>
+    </span>
   );
 }
 
-function DashboardCardContent({
+export function DashboardCardContent({
   className,
   ...props
 }: React.ComponentProps<"div">) {
   return (
     <div
       className={cn(
-        "w-full rounded-md border bg-white/40 dark:bg-black/25 flex flex-col gap-1 p-2 h-full",
+        "w-full max-h-96 rounded-md border bg-white/40 dark:bg-black/25 flex flex-col gap-1 p-2 h-full",
         className
       )}
       {...props}
@@ -182,14 +182,14 @@ function DashboardCardContent({
   );
 }
 
-function DashboardCardContentTitle({
+export function DashboardCardContentTitle({
   className,
   ...props
 }: React.ComponentProps<"p">) {
   return <p className={cn("font-medium mt-2", className)} {...props} />;
 }
 
-function DashboardCardContentLabel({
+export function DashboardCardContentLabel({
   className,
   ...props
 }: React.ComponentProps<"span">) {
