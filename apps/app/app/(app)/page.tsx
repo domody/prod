@@ -130,7 +130,7 @@ export default function Page() {
                   </DashboardSectionItem>
                 ))
               ) : (
-                <Empty className="border w-full">
+                <Empty className="border border-solid w-full">
                   <EmptyHeader>
                     <EmptyMedia variant={"icon"}>
                       <Check />
@@ -161,7 +161,7 @@ export default function Page() {
                   </DashboardSectionItem>
                 ))
               ) : (
-                <Empty className="border w-full">
+                <Empty className="border border-solid w-full">
                   <EmptyHeader>
                     <EmptyMedia variant={"icon"}>
                       <Inbox />
