@@ -18,9 +18,13 @@ import { SidebarMain } from "./SidebarMain";
 import { UserNav } from "./UserNav";
 import { NavTeams } from "./NavTeams";
 
-export function AppSidebar() {
+export function AppSidebar({
+  variant,
+}: {
+  variant?: "inset" | "sidebar" | "floating" | undefined;
+}) {
   return (
-    <Sidebar collapsible="icon">
+    <Sidebar collapsible="icon" variant={variant}>
       <SidebarHeader className="h-12 border-b">
         <OrganisationSwitcher />
       </SidebarHeader>

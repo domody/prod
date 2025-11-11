@@ -89,7 +89,7 @@ export function Dashboard2() {
         </Tabs>
       </Topbar>
       {/* Tab content */}
-      <div className="w-full flex-1 px-8">{activeTabObj?.content}</div>
+      <div className="w-full flex-1">{activeTabObj?.content}</div>
     </div>
   );
 }
