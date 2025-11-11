@@ -19,6 +19,13 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@workspace/ui/components/dialog";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuGroup,
+} from "@workspace/ui/components/dropdown-menu";
 import { KbdGroup, Kbd } from "@workspace/ui/components/kbd";
 
 import { cn } from "@workspace/ui/lib/utils";
@@ -31,6 +38,7 @@ import {
   Monitor,
   CommandIcon,
   Search,
+  Grip,
 } from "lucide-react";
 import { Separator } from "@workspace/ui/components/separator";
 import { Button } from "@workspace/ui/components/button";
@@ -73,6 +81,20 @@ export function CommandMenu() {
   const [open, setOpen] = React.useState(false);
   const { theme, setTheme } = useTheme();
 
+  const [loco, setLoco] = React.useState<DialogPosition>("top-right");
+
+  const positions: DialogPosition[] = [
+    "top-left",
+    "top-center",
+    "top-right",
+    "center-left",
+    "center",
+    "center-right",
+    "bottom-left",
+    "bottom-center",
+    "bottom-right",
+  ];
+
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
       if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
@@ -92,8 +114,6 @@ export function CommandMenu() {
     document.addEventListener("keydown", down);
     return () => document.removeEventListener("keydown", down);
   }, []);
-
-  const loco: DialogPosition = "top-right";
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
@@ -161,7 +181,7 @@ export function CommandMenu() {
           </Command>
         </div>
         <div className="h-10 pr-4 bg-transparent flex items-center justify-between text-xs font-medium text-muted-foreground">
-          <div className="flex items-center justify-start gap-2">
+          <div className="flex items-center justify-start gap-1">
             <div className="p-0.5 border rounded-md">
               {themeOptions.map((option) => (
                 <Button
@@ -178,6 +198,37 @@ export function CommandMenu() {
                 </Button>
               ))}
             </div>
+            <DropdownMenu>
+              <DropdownMenuTrigger>
+                <Button
+                  variant="ghost"
+                  size="icon-sm"
+                  className={cn(
+                    "size-8 [&_svg:not([class*='size-'])]:size-3.5 rounded-sm hover:bg-accent/50 border"
+                  )}
+                >
+                  <Grip />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="border backdrop-blur-3xl bg-muted/35 dark:bg-popover/15 p-1 min-w-0">
+                <DropdownMenuGroup className="size-24 grid grid-cols-3 grid-rows-3 gap-0.5">
+                  {positions.map((pos) => (
+                    <DropdownMenuItem
+                      key={pos}
+                      onClick={() => setLoco(pos)}
+                      className={cn(
+                        "rounded-sm hover:bg-accent/50",
+                        loco === pos && "bg-accent/70"
+                      )}
+                      title={pos}
+                    >
+                      <Grip />
+                      {/* You could later add icons representing the direction */}
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuGroup>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
           <div className="flex items-center justify-end gap-2">
             <CommandMenuKbd>
