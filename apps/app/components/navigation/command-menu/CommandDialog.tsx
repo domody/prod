@@ -175,7 +175,7 @@ export const commandMenuActions = [
     title: "Toggle Sidebar",
     description: "Show or hide the sidebar",
     icon: Settings,
-    shortcut: [["Cmd", "K"], "B"],
+    shortcut: ["Cmd", "B"],
   },
 ];
 

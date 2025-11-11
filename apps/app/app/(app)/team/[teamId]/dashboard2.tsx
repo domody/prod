@@ -21,6 +21,7 @@ import {
 } from "lucide-react";
 
 import { SummaryContent } from "./SummaryContent";
+import { ListContent } from "./ListContent";
 
 // Tabs config
 export const tabs = [
@@ -34,7 +35,7 @@ export const tabs = [
     value: "list",
     label: "List",
     icon: ListTodo,
-    content: <div>List Content</div>,
+    content: <ListContent />,
   },
   {
     value: "boards",
@@ -81,7 +82,7 @@ export function Dashboard2() {
         <Tabs className="" value={activeTab} onValueChange={setActiveTab}>
           <TabsList className="gap-2 bg-transparent">
             {tabs.map((tab) => (
-              <TabsTrigger key={tab.value} value={tab.value} className="">
+              <TabsTrigger key={tab.value} value={tab.value} className="data-[state=active]:shadow-none data-[state=active]:border-border">
                 <tab.icon /> {tab.label}
               </TabsTrigger>
             ))}
