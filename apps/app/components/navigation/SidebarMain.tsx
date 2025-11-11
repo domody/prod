@@ -1,4 +1,4 @@
-import { Home, Search } from "lucide-react"; // or your icon library
+import { Home, Inbox, Search } from "lucide-react"; // or your icon library
 import Link from "next/link";
 import {
   SidebarGroup,
@@ -17,6 +17,7 @@ type MainNavItem = {
 const main: MainNavItem[] = [
   { title: "Home", href: "/", icon: Home },
   { title: "Search", href: "/search", icon: Search },
+  { title: "Inbox", href: "/inbox", icon: Inbox },
 ];
 
 export function SidebarMain() {
