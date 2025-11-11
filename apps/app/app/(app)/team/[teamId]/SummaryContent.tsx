@@ -21,7 +21,7 @@ export function SummaryContent() {
           <SummaryChart />
           <DashboardCardContentTitle>13 Completed</DashboardCardContentTitle>
           <DashboardCardContentLabel>
-            +4 Last week
+            +4 vs Last week
             <TrendingUp />
           </DashboardCardContentLabel>
         </DashboardCardContent>
@@ -33,7 +33,7 @@ export function SummaryContent() {
           <SummaryChart />
           <DashboardCardContentTitle>21 Created</DashboardCardContentTitle>
           <DashboardCardContentLabel>
-            −3 vs last week
+            -3 vs Last week
             <TrendingDown />
           </DashboardCardContentLabel>
         </DashboardCardContent>
@@ -116,7 +116,7 @@ function DashboardCardContentTitle({
   className,
   ...props
 }: React.ComponentProps<"p">) {
-  return <p className={cn("font-medium mt-4", className)} {...props} />;
+  return <p className={cn("font-medium mt-2", className)} {...props} />;
 }
 
 function DashboardCardContentLabel({
