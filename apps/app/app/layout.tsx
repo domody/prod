@@ -25,8 +25,9 @@ export default function RootLayout({
         className={`${fontSans.variable} ${fontMono.variable} font-sans antialiased `}
       >
         <Providers>
-          <AppSidebar />
-          <main className="w-full h-full @container/main">{children}</main>
+          <main className="w-full h-full @container/main flex flex-col">
+            {children}
+          </main>
         </Providers>
       </body>
     </html>

@@ -25,7 +25,7 @@ export function SidebarMain() {
       <SidebarMenu>
         {main.map((item) => (
           <SidebarMenuItem key={item.title}>
-            <SidebarMenuButton asChild>
+            <SidebarMenuButton tooltip={item.title} asChild>
               <Link href={item.href} className="flex items-center gap-2">
                 <item.icon className="h-4 w-4" />
                 <span>{item.title}</span>

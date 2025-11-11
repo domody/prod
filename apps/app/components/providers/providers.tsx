@@ -17,7 +17,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
           disableTransitionOnChange
           enableColorScheme
         >
-          <SidebarProvider>{children}</SidebarProvider>
+          {children}
         </NextThemesProvider>
       </UserProvider>
     </ConvexClientProvider>
