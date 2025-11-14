@@ -1,5 +1,7 @@
 "use client";
 
+import * as React from "react";
+
 import { Area, AreaChart, Legend, XAxis } from "recharts";
 
 import {
@@ -12,15 +14,26 @@ import {
 } from "@workspace/ui/components/chart";
 import { cn } from "@workspace/ui/lib/utils";
 
-const chartData = [
-  { month: "January", desktop: 186 },
-  { month: "February", desktop: 305 },
-  { month: "March", desktop: 237 },
-  { month: "April", desktop: 73 },
-  { month: "May", desktop: 209 },
-  { month: "June", desktop: 214 },
-];
+// const chartData = [
+//   { month: "January", desktop: 186 },
+//   { month: "February", desktop: 305 },
+//   { month: "March", desktop: 237 },
+//   { month: "April", desktop: 73 },
+//   { month: "May", desktop: 209 },
+//   { month: "June", desktop: 214 },
+// ];
 
+
+function generateRandomChartData(length = 7) {
+  const data = [];
+  for (let i = 0; i < length; i++) {
+    data.push({
+      month: `M${i + 1}`,
+      desktop: Math.floor(Math.random() * 80) + 150, // random number between 20–120
+    });
+  }
+  return data;
+}
 const chartConfig = {
   desktop: {
     label: "Desktop",
@@ -29,6 +42,8 @@ const chartConfig = {
 } satisfies ChartConfig;
 
 export function SummaryChart1({ className }: { className?: string }) {
+  const chartData = React.useMemo(() => generateRandomChartData(), []);
+
   return (
     <ChartContainer
       config={chartConfig}
@@ -38,6 +53,7 @@ export function SummaryChart1({ className }: { className?: string }) {
         accessibilityLayer
         data={chartData}
         margin={{
+          top: 24,
           left: 0,
           right: 0,
         }}
@@ -64,7 +80,7 @@ export function SummaryChart1({ className }: { className?: string }) {
             <stop
               offset="95%"
               stopColor="var(--color-desktop)"
-              stopOpacity={0.1}
+              stopOpacity={0}
             />
           </linearGradient>
         </defs>
@@ -150,7 +166,12 @@ export function SummaryChart2({ className }: { className?: string }) {
             top: 12,
             left: 24,
           }}
-          content={<ChartLegendContent verticalAlign="top" className="justify-start pt-0" />}
+          content={
+            <ChartLegendContent
+              verticalAlign="top"
+              className="justify-start pt-0"
+            />
+          }
         />
         {/* <CartesianGrid vertical={false} /> */}
         <XAxis
