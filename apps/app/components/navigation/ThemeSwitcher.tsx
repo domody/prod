@@ -30,8 +30,33 @@ import { Moon, Sun } from "lucide-react";
 import { useIsMobile } from "@workspace/ui/hooks/use-mobile";
 
 export function ThemeSwitcher() {
-  const isMobile = useIsMobile()
+  const isMobile = useIsMobile();
   const { theme, setTheme } = useTheme();
+
+  React.useEffect(() => {
+    const down = (e: KeyboardEvent) => {
+      if (e.key === "d" && (e.metaKey || e.ctrlKey)) {
+        if (
+          (e.target instanceof HTMLElement && e.target.isContentEditable) ||
+          e.target instanceof HTMLInputElement ||
+          e.target instanceof HTMLTextAreaElement ||
+          e.target instanceof HTMLSelectElement
+        ) {
+          return;
+        }
+
+        e.preventDefault();
+
+
+        const nextTheme =
+          theme === "light" ? "dark" : theme === "dark" ? "system" : "light";
+
+        setTheme(nextTheme);
+      }
+    };
+    document.addEventListener("keydown", down);
+    return () => document.removeEventListener("keydown", down);
+  }, [theme, setTheme]);
 
   return (
     <SidebarMenu>

@@ -38,6 +38,7 @@ import {
   CommandIcon,
   Search,
   Grip,
+  SunMoon,
 } from "lucide-react";
 import { Separator } from "@workspace/ui/components/separator";
 import { Button } from "@workspace/ui/components/button";
@@ -55,6 +56,7 @@ import {
   Clipboard,
   FileText,
 } from "lucide-react";
+import { title } from "process";
 
 export const commandMenuActions = [
   {
@@ -176,6 +178,12 @@ export const commandMenuActions = [
     description: "Show or hide the sidebar",
     icon: Settings,
     shortcut: ["Cmd", "B"],
+  },
+  {
+    title: "Toggle Theme",
+    description: "Switch between light, dark, or system themes",
+    icon: SunMoon,
+    shortcut: ["N", "O"],
   },
 ];
 
