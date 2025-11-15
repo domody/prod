@@ -1,8 +1,3 @@
-
-
 export default function UserSettings() {
-
-    return (
-        <div className="">Hello!</div>
-    )
+  return <div className="">Hello!</div>;
 }

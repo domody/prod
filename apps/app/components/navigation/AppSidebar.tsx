@@ -36,7 +36,7 @@ export function AppSidebar({
       <SidebarFooter>
         <ThemeSwitcher />
         <SidebarTrigger className="size-8" />
-        {/* <UserNav /> */}
+        <UserNav />
       </SidebarFooter>
     </Sidebar>
   );

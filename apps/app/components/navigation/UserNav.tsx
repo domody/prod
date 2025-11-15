@@ -33,7 +33,7 @@ export function UserNav() {
               className="w-full data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
               size={"lg"}
             >
-              <div className="size-8 bg-primary rounded-lg animate-pulse" />
+              <div className="size-8 bg-primary rounded-lg animate-pulse shrink-0" />
               <div className="flex flex-col gap-0.5 text-sm">
                 <p>Damian Mathews</p>
                 <p className="text-xs">dmathews@example.com</p>

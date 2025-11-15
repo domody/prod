@@ -78,7 +78,7 @@ export function Dashboard2() {
           <p className="text-sm font-semibold">Development</p>
         </div>
       </AppTopbar>
-      <Topbar className="items-center h-auto">
+      <Topbar className="items-center h-auto px-1">
         <Tabs className="" value={activeTab} onValueChange={setActiveTab}>
           <TabsList className="gap-2 bg-transparent p-1">
             {tabs.map((tab) => (

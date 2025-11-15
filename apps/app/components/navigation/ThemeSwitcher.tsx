@@ -63,12 +63,9 @@ export function ThemeSwitcher() {
       <SidebarMenuItem>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <SidebarMenuButton className="w-full data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground">
+            <SidebarMenuButton className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground size-8">
               <Sun className="absolute scale-100 dark:scale-0" />
               <Moon className="absolute scale-0 dark:scale-100" />
-              <p className="ml-6">
-                {/* {theme ? theme.toLocaleUpperCase()[0] + theme.slice(1) : ""} */}
-              </p>
             </SidebarMenuButton>
           </DropdownMenuTrigger>
           <DropdownMenuContent
