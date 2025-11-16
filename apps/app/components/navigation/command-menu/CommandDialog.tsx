@@ -280,7 +280,7 @@ export function CommandMenu() {
       <DialogContent
         showCloseButton={false}
         className={cn(
-          "border backdrop-blur-3xl bg-muted/35 dark:bg-popover/15 p-1 gap-1",
+          "border backdrop-blur-3xl bg-white/50 dark:bg-popover/15 p-1 gap-1",
           dialogPositionClasses[loco || "center"]
         )}
       >
@@ -345,7 +345,7 @@ export function CommandMenu() {
                   <Grip />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="border backdrop-blur-3xl bg-muted/35 dark:bg-popover/15 p-1 min-w-0">
+              <DropdownMenuContent className="border backdrop-blur-3xl bg-white/50 dark:bg-popover/15 p-1 min-w-0">
                 <DropdownMenuGroup className="size-24 grid grid-cols-3 grid-rows-3 gap-0.5">
                   {positions.map((pos) => (
                     <DropdownMenuItem

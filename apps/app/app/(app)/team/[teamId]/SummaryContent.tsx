@@ -34,7 +34,7 @@ const items = [
 
 export function SummaryContent() {
   return (
-    <div className="w-full max-h-[calc(100vh-6rem)] overflow-y-scroll no-scrollbar bg-muted/35 dark:bg-popover/15 h-full">
+    <div className="w-full max-h-[calc(100vh-6rem)] overflow-y-scroll no-scrollbar bg-white/50 dark:bg-popover/15 h-full">
       <div className="grid grid-cols-4 p-2 gap-1.5">
         <DashboardCard>
           <DashboardCardLabel>Completed in the Last 7 Days</DashboardCardLabel>
@@ -132,7 +132,7 @@ export function DashboardCard({
   return (
     <div
       className={cn(
-        "group/card relative col-span-1 h-full border rounded-lg p-1 flex flex-col gap-2 bg-muted/35 dark:bg-muted/10 items-start justify-start backdrop-blur-3xl",
+        "group/card relative col-span-1 h-full border rounded-lg p-1 flex flex-col gap-2 bg-white/50 dark:bg-muted/10 items-start justify-start backdrop-blur-3xl",
         className
       )}
       {...props}

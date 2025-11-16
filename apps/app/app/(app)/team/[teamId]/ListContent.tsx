@@ -46,7 +46,7 @@ export function ListContent() {
   const [open, setOpen] = React.useState(true);
 
   return (
-    <div className="w-full max-h-[calc(100vh-6rem)] overflow-y-scroll no-scrollbar bg-muted/35 dark:bg-popover/15 h-full">
+    <div className="w-full max-h-[calc(100vh-6rem)] overflow-y-scroll no-scrollbar bg-white/50 dark:bg-popover/15 h-full">
       <div className="grid grid-cols-1 p-2 gap-1.5">
         {statuses.map((status, idx) => (
           <DashboardCard key={idx} className="h-min">
