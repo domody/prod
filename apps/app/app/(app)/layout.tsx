@@ -1,5 +1,5 @@
 import { AppProviders } from "@/components/providers/app-providers";
-import { AppSidebar } from "@/components/navigation/AppSidebar";
+import { AppSidebar } from "@/components/navigation/sidebar/AppSidebar";
 import { CommandDialog } from "@workspace/ui/components/command";
 import { SidebarInset } from "@workspace/ui/components/sidebar";
 export default function AppLayout({

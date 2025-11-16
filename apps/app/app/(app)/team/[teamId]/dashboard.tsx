@@ -63,7 +63,7 @@ export const tabs = [
   },
 ];
 
-export function Dashboard2() {
+export function Dashboard() {
   const [activeTab, setActiveTab] = React.useState("summary");
 
   const activeTabObj = tabs.find((tab) => tab.value === activeTab);

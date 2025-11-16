@@ -13,7 +13,7 @@ import { Switch } from "@workspace/ui/components/switch";
 import { Label } from "@workspace/ui/components/label";
 import { DashboardCardContentLabel } from "@/app/(app)/team/[teamId]/SummaryContent";
 import { Button } from "@workspace/ui/components/button";
-import { ArrowUp } from "lucide-react";
+import { ArrowUp, Upload } from "lucide-react";
 
 type BaseField = { id: string; label: string; description?: string };
 
@@ -43,11 +43,13 @@ type Field = TextField | CheckboxField | SelectField | ImageField;
 export function FieldRenderer({ field }: { field: Field }) {
   switch (field.type) {
     case "text":
-      return <Input defaultValue={field.defaultValue!} />;
+      return <Input defaultValue={field.defaultValue!} className="rounded-sm" />;
     case "email":
-      return <Input type="email" defaultValue={field.defaultValue!} />;
+      return <Input type="email" defaultValue={field.defaultValue!} className="rounded-sm" />;
+    case "tel":
+      return <Input type="tel" defaultValue={field.defaultValue!} className="rounded-sm" />;
     case "password":
-      return <Input type="password" defaultValue={field.defaultValue!} />;
+      return <Input type="password" defaultValue={field.defaultValue!} className="rounded-sm" />;
     case "checkbox":
       return (
         <div className="flex items-start gap-2">
@@ -75,10 +77,10 @@ export function FieldRenderer({ field }: { field: Field }) {
     case "select":
       return (
         <Select defaultValue={field.defaultValue}>
-          <SelectTrigger className="w-[180px]">
+          <SelectTrigger className="w-[180px] rounded-sm">
             <SelectValue placeholder={field.label} />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent className="rounded-sm">
             {field.options.map((option) => (
               <SelectItem key={option} value={option}>
                 {option}
@@ -89,8 +91,8 @@ export function FieldRenderer({ field }: { field: Field }) {
       );
     case "image":
       return (
-        <Button className="w-min" variant={"outline"} size={"sm"}>
-          <ArrowUp />
+        <Button className="w-min rounded-sm" variant={"outline"} size={"sm"}>
+          <Upload />
           Upload
         </Button>
       );

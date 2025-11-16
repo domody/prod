@@ -2,8 +2,7 @@
 
 import * as React from "react";
 import { useSearchParams } from "next/navigation";
-import { Dashboard1 } from "./dashboard1";
-import { Dashboard2 } from "./dashboard2";
+import { Dashboard } from "./dashboard";
 
 export default function TeamPage({
   params,
@@ -11,9 +10,6 @@ export default function TeamPage({
   params: Promise<{ teamId: string }>;
 }) {
   const { teamId } = React.use(params);
-  const searchParams = useSearchParams();
 
-  const variant = searchParams.get("variant");
-  console.log(variant)
-  return variant == "2" ? <Dashboard2 /> : <Dashboard1 />;
+  return <Dashboard />
 }

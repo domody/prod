@@ -15,9 +15,9 @@ export function SettingsRenderer({ tabId }: { tabId: string }) {
   const tab = settingsSchema.tabs.find((t) => t.id === tabId);
 
   return (
-    <div className="flex flex-col gap-4 p-2 w-full max-w-5xl mx-auto">
+    <div className="flex flex-col gap-1.5 p-2 w-full max-w-5xl mx-auto">
       {tab?.sections.map((section) => (
-        <DashboardCard key={section.title} className="">
+        <DashboardCard key={section.title}>
           <DashboardCardLabel className="text-sm text-foreground">
             {section.title}
           </DashboardCardLabel>

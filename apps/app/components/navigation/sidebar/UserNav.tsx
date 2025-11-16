@@ -58,7 +58,7 @@ export function UserNav() {
               <DropdownMenuItem>
                 <User /> Profile
               </DropdownMenuItem>
-              <Link href={'/settings'}>
+              <Link href={'/settings/profile'}>
                 <DropdownMenuItem>
                   <Settings /> Settings
                 </DropdownMenuItem>
