@@ -1,0 +1,16 @@
+[
+  {
+    "ownerId": "user_123",
+    "name": "Work Projects",
+    "description": "All ongoing work-related documents.",
+    "sharedWith": [],
+    "updatedTime": 1730127600000
+  },
+  {
+    "ownerId": "user_123",
+    "name": "Personal Notes",
+    "description": "Ideas, reflections, and miscellaneous notes.",
+    "sharedWith": [],
+    "updatedTime": 1730128800000
+  }
+]

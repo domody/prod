@@ -1,8 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 
 import "@workspace/ui/globals.css";
-import { Providers } from "@/components/providers";
-import { AppSidebar } from "@/components/navigation/AppSidebar";
+import { Providers } from "@/components/providers/providers";
+import { AppSidebar } from "@/components/navigation/sidebar/AppSidebar";
 
 const fontSans = Geist({
   subsets: ["latin"],
@@ -25,8 +25,9 @@ export default function RootLayout({
         className={`${fontSans.variable} ${fontMono.variable} font-sans antialiased `}
       >
         <Providers>
-          <AppSidebar />
-          <main className="w-full h-full">{children}</main>
+          <main className="w-full h-full @container/main flex flex-col">
+            {children}
+          </main>
         </Providers>
       </body>
     </html>

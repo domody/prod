@@ -18,5 +18,10 @@
   "packageManager": "pnpm@10.4.1",
   "engines": {
     "node": ">=20"
+  },
+  "dependencies": {
+    "@auth/core": "0.37.0",
+    "@convex-dev/auth": "^0.0.90",
+    "convex": "^1.28.0"
   }
 }
