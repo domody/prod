@@ -16,7 +16,6 @@ type MainNavItem = {
 
 const main: MainNavItem[] = [
   { title: "Home", href: "/", icon: Home },
-  { title: "Search", href: "/search", icon: Search },
   { title: "Inbox", href: "/inbox", icon: Inbox },
 ];
 
